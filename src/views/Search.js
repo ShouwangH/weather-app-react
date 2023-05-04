@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 
-const key = 'AIzaSyCIhGuZvAOhq7zx4PvXSislOCWVX4PEEm4'
-
 export default function Search({setWeatherData, setNiceLocation}) {
 
+  const key = process.env.REACT_APP_API_KEY
+
+
   const [search, setSearch] = useState({})
+  
 
   const handleChange = (e) => {
     //check if e.target.name is lat or long and make sure it's a number
@@ -26,6 +28,7 @@ export default function Search({setWeatherData, setNiceLocation}) {
  
 
   const getLocation = async () => {
+    console.log(key)
     const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${search.location.toLowerCase().replace(/[\W ]+/, '+')}&key=${key}`)
     const data = await response.json()
     return data 

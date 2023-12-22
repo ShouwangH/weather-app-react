@@ -3,7 +3,7 @@
 > Exercise to refactor pure javascript app to incorporate react frontend.
 > Also familiarize with some google cloud functionality and API endpoints.
 > 
-> Live demo [_here_](https://shouwangh.github.io/weather-app-react/). 
+>
 <img src="public/preview.gif" align="center">
 
 ## Table of Contents
